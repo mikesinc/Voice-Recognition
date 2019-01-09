@@ -9,7 +9,7 @@ class App extends Component {
   }
 
     onClick() {    
-    fetch("/api/speech-to-text/token")
+    fetch("http://localhost:3002/api/speech-to-text/token")
     .then(response => {
       return response.text();
     }).then(token => {      
