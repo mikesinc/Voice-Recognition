@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 
 import recognizeMic from 'watson-speech/speech-to-text/recognize-microphone';
