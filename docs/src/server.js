@@ -44,7 +44,7 @@ app.use(cors());
 var sttAuthService = new AuthorizationV1(
   Object.assign(
     {
-      iam_apikey: process.env.SPEECH_TO_TEXT_IAM_APIKEY
+      iam_apikey: 'QzZcJ68xZ5AIzwHpEXKWClSflDBulC1bG6N0GXDIAMRP'
     },
     vcapServices.getCredentials('speech_to_text') // pulls credentials from environment in bluemix, otherwise returns {}
     )

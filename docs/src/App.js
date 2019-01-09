@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 import recognizeMic from 'watson-speech/speech-to-text/recognize-microphone';
-
 class App extends Component {
   constructor() {
     super();
@@ -10,10 +9,10 @@ class App extends Component {
   }
 
     onClick() {    
-    fetch("http://localhost:3002/api/speech-to-text/token")
+    fetch("/api/speech-to-text/token")
     .then(response => {
       return response.text();
-    }).then(token => {
+    }).then(token => {      
     var stream = recognizeMic({
       url: 'wss://gateway-syd.watsonplatform.net/speech-to-text/api', //overwrite URL to match region
       access_token: token, // use `access_token` as the parameter name if using an RC service
