@@ -2,6 +2,7 @@
   "name": "myvoicething",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mikesinc.github.io/Voice-Recognition",
   "dependencies": {
     "cors": "^2.8.5",
     "curl": "^0.1.4",
