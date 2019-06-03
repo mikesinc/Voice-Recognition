@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/Voice-Recognition/static/css/main.8cdd704d.chunk.css"
   },
   {
-    "revision": "30fc191c82096c246faf72aa38f9dc8c",
+    "revision": "192ef2e686fb3dc59d98c33507174e1c",
     "url": "/Voice-Recognition/index.html"
   }
 ];
