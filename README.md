@@ -4,4 +4,4 @@ This website uses the **IBM Watson speech token lite plan**, which expires after
 
 Live Version:
 
-https://mikesinc.github.io/Voice-Recognition/
+https://voice-recognition-f74f4.firebaseapp.com/
