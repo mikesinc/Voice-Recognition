@@ -1,13 +1,146 @@
+@keyframes slide {
+  0%{
+    transform: translate3d(0px, 0, 0);
+  }
+  100%{
+    transform: translate3d(-210vw, 0, 0);
+  }
+}
+
+h1 {
+  font-family: monospace;
+  font-size: 8pt;
+}
+
 .App {
   text-align: center;
-  background: black;
+  background: url('./assets/images/backdrop.jpg');
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.txt {
-  font-size: 24px;
-  color:white;
+.text {
+  color: black;
+  font-family: monospace;
+  height: 0;
+  padding-top: 10%;
+  font-size: 24pt;
+  -webkit-user-select: none;
 }
 
-.btn {
-  color: white;
+.buttons {
+  top: 20%;
+  font-family: monospace;
+  z-index: 1;
 }
+
+.btn-dark:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+  -webkit-user-select: none;
+}
+
+.clouds {
+  background: url('./assets/images/clouds.png');
+  background-repeat: repeat-x;
+  margin-top: 10%;
+  width: 300vw;
+  height: 100vh;
+  animation: slide 180s linear infinite;
+}
+
+.icons {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  padding-top: 20px;
+  width: 0;
+}
+
+.credits {
+  text-align: right;
+  position: absolute;
+  padding-top: 20px;
+  right: 1%;
+  -webkit-user-select: none;
+}
+
+@media screen and (max-width: 600px) {
+  @keyframes slide {
+    0%{
+      transform: translate3d(0px, 0, 0);
+    }
+    100%{
+      transform: translate3d(-350vw, 0, 0);
+    }
+  }
+  h1 {
+    font-size: 6pt;
+  }
+  .buttons {
+    top: 28%;
+  }
+  .clouds {
+    margin-top: 100%;
+    width: 600vw;
+    height: 60vh;
+    animation: slide 45s linear infinite;
+  }
+  .text {
+    padding-top: 50%;
+    font-size: 14pt;
+    -webkit-user-select: none;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  @keyframes slide {
+    0%{
+      transform: translate3d(0px, 0, 0);
+    }
+    100%{
+      transform: translate3d(-530vw, 0, 0);
+    }
+  }
+  .buttons {
+    top: 30%;
+  }
+  .clouds {
+    margin-top: 50%;
+    width: 700vw;
+    height: 50vh;
+    animation: slide 90s linear infinite;
+  }
+  .text {
+    padding-top: 30%;
+    font-size: 16pt;
+  }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 800px) {
+  @keyframes slide {
+    0%{
+      transform: translate3d(0px, 0, 0);
+    }
+    100%{
+      transform: translate3d(-800vw, 0, 0);
+    }
+  }
+  .buttons {
+    top: 20%;
+  }
+  .clouds {
+    margin-top: 10%;
+    width: 1000vw;
+    height: 60vh;
+    animation: slide 5s linear infinite;
+  }
+  .text {
+    padding-top: 20%;
+    font-size: 16pt;
+  }
+}
+

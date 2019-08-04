@@ -13,6 +13,7 @@
     "express-rate-limit": "^3.5.3",
     "express-secure-only": "^0.2.1",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.10",
     "react-dom": "^16.8.6",
     "react-scripts": "^2.1.8",
     "vcap_services": "^0.7.1",
