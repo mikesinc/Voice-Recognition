@@ -2,7 +2,6 @@
   "name": "myvoicething",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mikesinc.github.io/Voice-Recognition",
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
