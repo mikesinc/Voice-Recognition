@@ -1,7 +1,13 @@
 .App {
   text-align: center;
+  background: black;
 }
 
 .txt {
   font-size: 24px;
+  color:white;
+}
+
+.btn {
+  color: white;
 }

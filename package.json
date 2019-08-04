@@ -4,19 +4,20 @@
   "private": true,
   "homepage": "https://mikesinc.github.io/Voice-Recognition",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "curl": "^0.1.4",
     "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "express-rate-limit": "^3.3.2",
+    "express": "^4.17.1",
+    "express-rate-limit": "^3.5.3",
     "express-secure-only": "^0.2.1",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-scripts": "^2.1.3",
-    "vcap_services": "^0.6.0",
-    "watson-developer-cloud": "^3.15.0",
-    "watson-speech": "^0.35.4"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^2.1.8",
+    "vcap_services": "^0.7.1",
+    "watson-developer-cloud": "^3.18.4",
+    "watson-speech": "^0.35.12"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -37,7 +38,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "concurrently": "^4.1.0",
-    "gh-pages": "^2.0.1"
+    "concurrently": "^4.1.1",
+    "gh-pages": "^2.1.0"
   }
 }
