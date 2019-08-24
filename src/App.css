@@ -13,7 +13,7 @@
   background-repeat: repeat-x;
   background-position: center;
   width: 8020px;
-  min-height: 60vh;
+  min-height: 40vh;
   bottom: 0;
   animation: slide 180s linear infinite;
   transition: 1s;
@@ -38,6 +38,10 @@ h1 {
   font-family: monospace;
 }
 .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
   font-size: 14pt;
   max-width: 800px;
   height: 300px;
