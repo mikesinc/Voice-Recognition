@@ -1,41 +1,68 @@
+/*Animated background*/
 @keyframes slide {
   0%{
-    transform: translate3d(0px, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   100%{
-    transform: translate3d(-210vw, 0, 0);
+    transform: translate3d(-4010px, 0, 0);
   }
 }
-
-h1 {
-  font-family: monospace;
-  font-size: 8pt;
+.clouds {
+  position: absolute;
+  background: url('./assets/images/clouds.png');
+  background-repeat: repeat-x;
+  background-position: center;
+  width: 8020px;
+  min-height: 60vh;
+  bottom: 0;
+  animation: slide 180s linear infinite;
+  transition: 1s;
 }
 
+/*Overall*/
+h1 {
+  font-family: monospace;
+  font-size: 6pt;
+}
 .App {
+  margin: 0;
+  padding: 0;
+  position: relative;
   text-align: center;
   background: url('./assets/images/backdrop.jpg');
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   height: 100vh;
   overflow: hidden;
+  transition: .1s;
+  font-family: monospace;
 }
-
 .text {
-  color: black;
-  font-family: monospace;
-  height: 0;
-  padding-top: 10%;
-  font-size: 24pt;
-  -webkit-user-select: none;
+  font-size: 14pt;
+  max-width: 800px;
+  height: 300px;
+  overflow: hidden;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  transition: 1s;
+}
+@media screen and (min-width: 768px) {
+  .text {
+    margin-top: 200px;
+  }
+}
+@media screen and (max-height: 414px) {
+  .text {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    height: 150px;
+    max-width: 450px;
+    font-size: 10pt;
+  }
 }
 
-.buttons {
-  top: 20vh;
-  font-family: monospace;
-  z-index: 1;
-}
-
+/*Control*/
 .btn-dark:hover {
   background-color: white;
   color: black;
@@ -43,152 +70,20 @@ h1 {
   -webkit-user-select: none;
 }
 
-.clouds {
-  background: url('./assets/images/clouds.png');
-  background-repeat: repeat-x;
-  margin-top: 20%;
-  width: 300vw;
-  height: 100vh;
-  animation: slide 180s linear infinite;
-}
-
-.icons {
-  display: flex;
+/*Icons*/
+.github {
+  max-width: fit-content;
+  text-align: left;
   position: absolute;
-  z-index: 1;
-  padding-top: 1%;
-  width: 0;
+  margin-top: 20px;
+  left: 1%;
+  -webkit-user-select: none;
 }
-
 .credits {
+  max-width: fit-content;
   text-align: right;
   position: absolute;
-  padding-top: 20px;
+  margin-top: 20px;
   right: 1%;
   -webkit-user-select: none;
 }
-
-@media screen and (max-width: 600px) {
-  @keyframes slide {
-    0%{
-      transform: translate3d(0vw, 0, 0);
-    }
-    100%{
-      transform: translate3d(-350vw, 0, 0);
-    }
-  }
-  h1 {
-    font-size: 6pt;
-  }
-  .buttons {
-    top: 30vh;
-  }
-  .clouds {
-    margin-top: 35vh;
-    width: 600vw;
-    height: 60vh;
-    animation: slide 45s linear infinite;
-  }
-  .text {
-    padding-top: 40%;
-    font-size: 14pt;
-    -webkit-user-select: none;
-  }
-}
-
-@media screen and (max-width: 750px) and (min-width: 600px) {
-  @keyframes slide {
-    0%{
-      transform: translate3d(0vw, 0, 0);
-    }
-    100%{
-      transform: translate3d(-700vw, 0, 0);
-    }
-  }
-  .buttons {
-    top: 30vh;
-  }
-  .clouds {
-    margin-top: 5%;
-    width: 800vw;
-    height: 70vh;
-    animation: slide 120s linear infinite;
-  }
-  .text {
-    padding-top: 10%;
-    font-size: 16pt;
-  }
-}
-
-@media screen and (max-width: 800px) and (min-width: 750px) {
-  @keyframes slide {
-    0%{
-      transform: translate3d(0vw, 0, 0);
-    }
-    100%{
-      transform: translate3d(-530vw, 0, 0);
-    }
-  }
-  .buttons {
-    top: 25vh;
-  }
-  .clouds {
-    margin-top: 40%;
-    width: 700vw;
-    height: 50vh;
-    animation: slide 90s linear infinite;
-  }
-  .text {
-    padding-top: 30%;
-    font-size: 16pt;
-  }
-}
-
-@media screen and (max-width: 900px) and (min-width: 800px) {
-  @keyframes slide {
-    0%{
-      transform: translate3d(0vw, 0, 0);
-    }
-    100%{
-      transform: translate3d(-530vw, 0, 0);
-    }
-  }
-  .buttons {
-    top: 25vh;
-  }
-  .clouds {
-    margin-top: 5%;
-    width: 700vw;
-    height: 60vh;
-    animation: slide 90s linear infinite;
-  }
-  .text {
-    padding-top: 10%;
-    font-size: 16pt;
-  }
-}
-
-@media screen and (max-width: 1100px) and (min-width: 900px) {
-  @keyframes slide {
-    0%{
-      transform: translate3d(0px, 0, 0);
-    }
-    100%{
-      transform: translate3d(-800vw, 0, 0);
-    }
-  }
-  .buttons {
-    top: 25vh;
-  }
-  .clouds {
-    margin-top: 20%;
-    width: 1000vw;
-    height: 50vh;
-    animation: slide 180s linear infinite;
-  }
-  .text {
-    padding-top: 20%;
-    font-size: 16pt;
-  }
-}
-

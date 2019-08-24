@@ -18,9 +18,8 @@ const App = () => {
     })
       .then(token => {
         const stream = recognizeMic({
-          // url: 'wss://gateway-syd.watsonplatform.net/speech-to-text/api', //overwrite URL to match region
           url: 'https://gateway-syd.watsonplatform.net/speech-to-text/api',
-          access_token: token.data, // use `access_token` as the parameter name if using an RC service
+          access_token: token.data,
           Object_Mode: true,
           interim_results: true,
           extractResults: true
@@ -41,33 +40,33 @@ const App = () => {
 
   useEffect(() => {
     if (!listening) {
-      setText("");
+      setText(" ");
     }
   })
 
   return (
     <Container fluid className="App">
-      <Container fluid className="icons">
-        <a href="https://github.com/mikesinc" target='_blank' rel='noopener noreferrer'>
-          <img className='shortIcon' src='https://avatars2.githubusercontent.com/u/28840236?s=460&v=4' height="40vw" weight="40vw" alt='git'></img>
-        </a>
-        <a href="https://www.ibm.com/cloud" target='_blank' rel='noopener noreferrer'>
-          <img className='shortIcon' src={`${require('./assets/images/IBM.png')}`} height="40vw" weight="40vw" alt='git'></img>
+      <div className="clouds"></div>
+      <Container fluid className="github">
+      <h1>Website by mikesinc</h1>
+        <a href="https://github.com/mikesinc" target='_blank' rel='noopener noreferrer' >
+          <img src='https://avatars2.githubusercontent.com/u/28840236?s=460&v=4' height="40vw" weight="40vw" alt='git'></img>
         </a>
       </Container>
       <Container fluid className="credits">
         <h1>Powered by IBM Watson&#8482;</h1>
-        <h1>Website created by Michael Sinclair</h1>
+        <a href="https://www.ibm.com/cloud" target='_blank' rel='noopener noreferrer'>
+          <img src={`${require('./assets/images/IBM.png')}`} height="40vw" weight="40vw" alt='git'></img>
+        </a>
       </Container>
       <Container className="text">{text}</Container>
-      <ButtonGroup className="buttons" size="lg" vertical>
+      <ButtonGroup size="lg" vertical>
         {
           !listening
             ? <Button variant="dark" onClick={() => handleClick()}>Start Listening</Button>
             : <Button variant="dark" id="stop" onClick={() => setIsListening(false)}>Stop listening</Button>
         }
       </ButtonGroup>
-      <Container fluid className="clouds"></Container>
     </Container>
   )
 }
